@@ -1,0 +1,53 @@
+.button {
+  position: relative;
+  padding: 0.833rem 1.25rem;
+  border-radius: 4.74rem;
+  background: rgba(2, 4, 9, 0.2);
+  color: var(--white);
+  font-size: 0.9375rem;
+  transition: var(--transition);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4.74rem;
+  padding: 0.1rem;
+  background: var(--gradient-button);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  transition: var(--transition);
+  opacity: 1;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4.74rem;
+  width: 0;
+  height: 100%;
+  background: var(--gradient-button);
+  z-index: -1;
+  transition: var(--transition);
+  opacity: 1;
+}
+
+.button:hover::after,
+.button:focus::after {
+  width: 100%;
+}
+@media (orientation: portrait) {
+  .button {
+    font-size: 4rem !important;
+    padding: 2rem 4rem !important;
+  }
+  .button::before {
+    padding: 0.5rem;
+  }
+}

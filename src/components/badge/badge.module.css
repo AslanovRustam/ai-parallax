@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  display: flex;
+  padding: 1.67rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.04rem;
+  border-radius: 4.74rem;
+  background: linear-gradient(
+    106deg,
+    rgba(150, 52, 136, 0.2) -12.33%,
+    rgba(252, 111, 50, 0.2) 50.28%,
+    rgba(255, 74, 89, 0.2) 114.17%
+  );
+  transform: translateY(5.21rem);
+  transition: transform 0.1s;
+  z-index: 1;
+}
+.bigText {
+  text-align: center;
+  font-family: var(--font-grotesk);
+  font-size: 3.33rem;
+  font-weight: 600;
+}
+.smallText {
+  font-size: 1.25rem;
+}
+@media (orientation: portrait) {
+  .container {
+    padding: 3rem;
+    gap: 1.04rem;
+    border-radius: 4.74rem;
+    transform: translateY(5.21rem);
+  }
+  .bigText {
+    font-size: 4rem;
+  }
+  .smallText {
+    font-size: 2.5rem;
+  }
+}

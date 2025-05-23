@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rightSide {
+  max-width: 37.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.67rem;
+}
+.lefttSide {
+  width: 20.8rem;
+  height: 20.8rem;
+}
+.subTitle {
+  font-size: 1.07rem;
+  line-height: 1.49rem;
+}
+@media (orientation: portrait) {
+  .container {
+    flex-direction: column;
+  }
+  .subTitle {
+    font-size: 3rem;
+    line-height: normal;
+  }
+  .rightSide {
+    max-width: unset;
+    gap: 3rem;
+  }
+}

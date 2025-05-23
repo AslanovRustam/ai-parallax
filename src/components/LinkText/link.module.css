@@ -1,24 +1,13 @@
-.navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.list {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-.item {
+.link {
+  position: relative;
+  margin: 0 auto;
+  color: var(--grey);
+  width: fit-content;
+  transition: var(--transition);
   cursor: pointer;
 }
-.text {
-  position: relative;
-  color: var(--white);
-  font-size: 0.9375rem;
-  transition: var(--transition);
-}
 
-.text::before {
+.link::before {
   content: attr(data-text);
   position: absolute;
   inset: 0;
@@ -26,21 +15,18 @@
   background: var(--gradient-button);
   background-clip: text;
   -webkit-background-clip: text;
-  z-index: 1;
-  opacity: 0;
   transition: opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
-.text:hover::before,
-.text:focus::before {
+.link:hover::before,
+.link:focus::before {
   opacity: 1;
 }
 @media (orientation: portrait) {
-  .list {
-    flex-direction: column;
-  }
-  .text {
+  .link {
     font-size: 3rem;
   }
 }

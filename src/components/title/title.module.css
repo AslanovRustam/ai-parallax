@@ -1,0 +1,11 @@
+.title {
+  font-family: var(--font-grotesk);
+  font-size: 3.33rem;
+  font-weight: 500;
+  line-height: 110%;
+}
+@media (orientation: portrait) {
+  .title {
+    font-size: 7rem !important;
+  }
+}

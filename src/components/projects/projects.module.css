@@ -1,0 +1,28 @@
+.container {
+  margin-top: 5.21rem;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 6.25rem;
+}
+.item {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  height: 50px;
+  width: auto;
+}
+@media (orientation: portrait) {
+  .container {
+    padding: 6rem 0;
+  }
+  .icon {
+    height: 20px;
+    width: auto;
+  }
+}
