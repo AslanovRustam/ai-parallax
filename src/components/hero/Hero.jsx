@@ -76,7 +76,7 @@ function Hero() {
               { y: "10%", x: "40%", rotate: "10deg" },
               "stage1"
             )
-            .to(`.${styles.list}`, { y: "-260%" }, "stage1")
+            .to(`.${styles.list}`, { y: "-160%" }, "stage1")
             .to(".gsap-badge", { y: 0, stagger: 0.15, duration: 0.2 }, "stage1")
             .to(headerRef.current, { y: "-800%", duration: 0.1 }, "stage2")
             .to(wrapperRef.current, { y: "-200%" }, "stage2")
@@ -87,7 +87,7 @@ function Hero() {
               { y: "-50%", x: "30%", rotate: "10deg" },
               "stage2"
             )
-            .to(`.${styles.projects}`, { y: "-350%" }, "-=0.4")
+            .to(`.${styles.projects}`, { y: "-450%" }, "-=0.4")
             .to(projectRef.current, { x: "-40%" }, "-=0.6")
             .to(`.${styles.projects}`, { y: "-900%" }, "stage3")
             .to(projectRef.current, { x: "-80%" }, "stage3")
